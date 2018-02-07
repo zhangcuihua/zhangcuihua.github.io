@@ -5,19 +5,19 @@
   
 
   
-  <title>js的组成 | Hexo</title>
+  <title>call()和apply()用法和区别 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="js基本组成:ECMAscript  DOM  BOM ECMAscript  制定了js的核心语法规范  DOM:document object modal  文档对象模型 提供了操作页面元素的API  BOM:browser  object modal  浏览器对象模型  提供了操作浏览器相关的API window     window.onload     window.open();打开一">
+  <meta name="description" content="上下文调用模式： 在上下文调用模式中，this的指向是可以发生变化的； 上下文调用模式的目的：为了替换当前函数中的this指向 call() &amp;amp; apply()语法： 函数名.call(this要指向的新对象，参数1，参数2，参数3…); 函数名.apply(this要指向的新对象，[参数1，参数2，参数3…])区别： call 方法 后面的参数是一个一个穿进来的 apply 方法 后面的">
 <meta name="keywords" content="JS笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js的组成">
-<meta property="og:url" content="http://yoursite.com/2018/01/31/js的组成/index.html">
+<meta property="og:title" content="call()和apply()用法和区别">
+<meta property="og:url" content="http://yoursite.com/2018/02/07/call-和apply-用法和区别/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="js基本组成:ECMAscript  DOM  BOM ECMAscript  制定了js的核心语法规范  DOM:document object modal  文档对象模型 提供了操作页面元素的API  BOM:browser  object modal  浏览器对象模型  提供了操作浏览器相关的API window     window.onload     window.open();打开一">
-<meta property="og:updated_time" content="2018-02-02T06:47:17.011Z">
+<meta property="og:description" content="上下文调用模式： 在上下文调用模式中，this的指向是可以发生变化的； 上下文调用模式的目的：为了替换当前函数中的this指向 call() &amp;amp; apply()语法： 函数名.call(this要指向的新对象，参数1，参数2，参数3…); 函数名.apply(this要指向的新对象，[参数1，参数2，参数3…])区别： call 方法 后面的参数是一个一个穿进来的 apply 方法 后面的">
+<meta property="og:updated_time" content="2018-02-07T08:58:10.875Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js的组成">
-<meta name="twitter:description" content="js基本组成:ECMAscript  DOM  BOM ECMAscript  制定了js的核心语法规范  DOM:document object modal  文档对象模型 提供了操作页面元素的API  BOM:browser  object modal  浏览器对象模型  提供了操作浏览器相关的API window     window.onload     window.open();打开一">
+<meta name="twitter:title" content="call()和apply()用法和区别">
+<meta name="twitter:description" content="上下文调用模式： 在上下文调用模式中，this的指向是可以发生变化的； 上下文调用模式的目的：为了替换当前函数中的this指向 call() &amp;amp; apply()语法： 函数名.call(this要指向的新对象，参数1，参数2，参数3…); 函数名.apply(this要指向的新对象，[参数1，参数2，参数3…])区别： call 方法 后面的参数是一个一个穿进来的 apply 方法 后面的">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-js的组成" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-call-和apply-用法和区别" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/01/31/js的组成/" class="article-date">
-  <time datetime="2018-01-31T02:16:15.000Z" itemprop="datePublished">2018-01-31</time>
+    <a href="/2018/02/07/call-和apply-用法和区别/" class="article-date">
+  <time datetime="2018-02-07T07:58:06.000Z" itemprop="datePublished">2018-02-07</time>
 </a>
     
   <div class="article-category">
@@ -82,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      js的组成
+      call()和apply()用法和区别
     </h1>
   
 
@@ -90,31 +90,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="js基本组成-ECMAscript-DOM-BOM"><a href="#js基本组成-ECMAscript-DOM-BOM" class="headerlink" title="js基本组成:ECMAscript  DOM  BOM"></a>js基本组成:ECMAscript  DOM  BOM</h3><ul>
-<li><p>ECMAscript<br>  制定了js的核心语法规范</p>
-</li>
-<li><p>DOM:document object modal  文档对象模型<br> 提供了操作页面元素的API</p>
-</li>
-<li><p>BOM:browser  object modal  浏览器对象模型<br>  提供了操作浏览器相关的API</p>
-<pre><code>window
-    window.onload
-    window.open();打开一个新的浏览器窗口或查找一个已命名的窗口
-    window.close();
-location
-    loaction.href   改变页面的url
-    loaction.reload  页面刷新
-navigator
-    userAgent  获取浏览器版本信息
-screen
-    width  获取屏幕的宽
-    height 获取屏幕的宽
-</code></pre></li>
+        <h3 id="上下文调用模式："><a href="#上下文调用模式：" class="headerlink" title="上下文调用模式："></a>上下文调用模式：</h3><ul>
+<li>在上下文调用模式中，this的指向是可以发生变化的；</li>
+<li>上下文调用模式的目的：为了替换当前函数中的this指向</li>
+<li>call() &amp; apply()<h3 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h3></li>
+<li>函数名.call(this要指向的新对象，参数1，参数2，参数3…);</li>
+<li>函数名.apply(this要指向的新对象，[参数1，参数2，参数3…])<h3 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h3></li>
+<li>call 方法 后面的参数是一个一个穿进来的</li>
+<li>apply 方法 后面的参数是以数组或者伪数组的行书传递</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function test(a,b,c)&#123;</span><br><span class="line">        this.a=a;</span><br><span class="line">        this.b=b;</span><br><span class="line">        this.c=c;</span><br><span class="line">        console.log(this);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    test(1,2,3);//this--&gt;window</span><br><span class="line"></span><br><span class="line">    var obj=&#123;&#125;;</span><br><span class="line"></span><br><span class="line">    test.call(obj,3,4,5);  //&#123;a: 3, b: 4, c: 5&#125;</span><br><span class="line"></span><br><span class="line">    test.apply(obj,[1,2,3]);  // &#123;a: 1, b: 2, c: 3&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/31/js的组成/" data-id="cjdcsk0f00005lwupzfjru4p9" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/07/call-和apply-用法和区别/" data-id="cjdcsk0e50000lwup9hhw301c" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS笔记/">JS笔记</a></li></ul>
@@ -125,15 +115,11 @@ screen
     
 <nav id="article-nav">
   
-    <a href="/2018/01/31/js数据类型/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Neuer</strong>
-      <div class="article-nav-title">
-        
-          js数据类型
-        
-      </div>
-    </a>
   
+    <a href="/2018/02/07/in关键字/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">in关键字</div>
+    </a>
   
 </nav>
 
