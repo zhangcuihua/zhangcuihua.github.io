@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Buscar"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,52 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-五种数组迭代方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/08/五种数组迭代方法/" class="article-date">
+  <time datetime="2018-02-08T09:12:26.000Z" itemprop="datePublished">2018-02-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/08/五种数组迭代方法/">五种数组迭代方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="every-返回值是boolean，判断是否所有元素都符合条件"><a href="#every-返回值是boolean，判断是否所有元素都符合条件" class="headerlink" title="every()返回值是boolean，判断是否所有元素都符合条件"></a>every()返回值是boolean，判断是否所有元素都符合条件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [ 1,5,7,11,30,40]</span><br><span class="line">   var result = arr.every(function(item)&#123;</span><br><span class="line">     return item &gt; 10</span><br><span class="line">   &#125;)</span><br><span class="line">   console.log(result) //false 只有所有的项都满足时才返回true</span><br></pre></td></tr></table></figure>
+<h3 id="some-返回值是boolean，判断是否有元素符合条件"><a href="#some-返回值是boolean，判断是否有元素符合条件" class="headerlink" title="some()返回值是boolean，判断是否有元素符合条件"></a>some()返回值是boolean，判断是否有元素符合条件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [ 1,5,7,11,30,40]</span><br><span class="line">    var result = arr.some(function(item)&#123;</span><br><span class="line">      return item &gt; 10</span><br><span class="line">    &#125;)</span><br><span class="line">    console.log(result) //true 只要有一项符合条件就返回true</span><br></pre></td></tr></table></figure>
+<h3 id="filter-返回所有符合条件组成的数组"><a href="#filter-返回所有符合条件组成的数组" class="headerlink" title="filter() 返回所有符合条件组成的数组"></a>filter() 返回所有符合条件组成的数组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [ 1,5,7,11,30,40]</span><br><span class="line">    var result = arr.filter(function(item)&#123;</span><br><span class="line">      return item &gt; 10</span><br><span class="line">    &#125;)</span><br><span class="line">    console.log(result) //[11, 30, 40] 返回所有符合条件组成的数组</span><br></pre></td></tr></table></figure>
+<h3 id="forEach-遍历数组"><a href="#forEach-遍历数组" class="headerlink" title="forEach() 遍历数组"></a>forEach() 遍历数组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [ 1,5,7,11,30,40]</span><br><span class="line">    var result = arr.forEach(function(item,index)&#123;</span><br><span class="line">       console.log(index) // 0 1 2 3 4 5 6</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="map-方法返回一个新数组，其结果是该数组都执行一次函数，原函数保持不变"><a href="#map-方法返回一个新数组，其结果是该数组都执行一次函数，原函数保持不变" class="headerlink" title="map() 方法返回一个新数组，其结果是该数组都执行一次函数，原函数保持不变"></a>map() 方法返回一个新数组，其结果是该数组都执行一次函数，原函数保持不变</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [ 1,5,7,11,30,40]</span><br><span class="line">    var result = arr.map(function(item)&#123;</span><br><span class="line">      return item + 10</span><br><span class="line">    &#125;)</span><br><span class="line">    console.log(result) //[11, 15, 17, 21, 40, 50] 返回每项返回值组成的数组</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/08/五种数组迭代方法/" data-id="cjdeagxfk0000z8upqwis8trr" class="article-share-link">Compartir</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS笔记/">JS笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-call-和apply-用法和区别" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -101,7 +147,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/07/call-和apply-用法和区别/" data-id="cjdcsk0e50000lwup9hhw301c" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/07/call-和apply-用法和区别/" data-id="cjdeadv4r0000tcup9pjntcjz" class="article-share-link">Compartir</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS笔记/">JS笔记</a></li></ul>
@@ -144,7 +190,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/07/in关键字/" data-id="cjdcsk0el0001lwup6ow3f9m8" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/07/in关键字/" data-id="cjdeadv5m0004tcupzfm304q0" class="article-share-link">Compartir</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS笔记/">JS笔记</a></li></ul>
@@ -195,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/05/与-区别/" data-id="cjdcsk0f00006lwup6nfa7i5n" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/05/与-区别/" data-id="cjdeadv620006tcup9ux0rlmi" class="article-share-link">Compartir</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS笔记/">JS笔记</a></li></ul>
@@ -246,7 +292,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/02/引用类型和值类型/" data-id="cjdcsk0f0000alwupvn2brf89" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/02/引用类型和值类型/" data-id="cjdeadv6h000otcupfvn2q3fy" class="article-share-link">Compartir</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS笔记/">JS笔记</a></li></ul>
@@ -295,7 +341,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/02/获取数据类型/" data-id="cjdcsk0fw000olwupea3by8nt" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/02/获取数据类型/" data-id="cjdeadv62000atcupp8o8za44" class="article-share-link">Compartir</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS笔记/">JS笔记</a></li></ul>
@@ -351,7 +397,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/31/js数据类型/" data-id="cjdcsk0f00004lwup03k3ja8e" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/31/js数据类型/" data-id="cjdeadv4r0001tcup4mecl3xv" class="article-share-link">Compartir</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS笔记/">JS笔记</a></li></ul>
@@ -413,7 +459,7 @@ screen
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/31/js的组成/" data-id="cjdcsk0f00005lwupzfjru4p9" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/31/js的组成/" data-id="cjdeadv5m0005tcup6o8bbh2y" class="article-share-link">Compartir</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS笔记/">JS笔记</a></li></ul>
@@ -433,7 +479,7 @@ screen
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Kategorien</h3>
+    <h3 class="widget-title">Categorías</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JS/">JS</a></li></ul>
     </div>
@@ -453,7 +499,7 @@ screen
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nube de Tags</h3>
     <div class="widget tagcloud">
       <a href="/tags/JS笔记/" style="font-size: 10px;">JS笔记</a>
     </div>
@@ -462,7 +508,7 @@ screen
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archivos</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
     </div>
@@ -472,9 +518,13 @@ screen
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Posts recientes</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/02/08/五种数组迭代方法/">五种数组迭代方法</a>
+          </li>
         
           <li>
             <a href="/2018/02/07/call-和apply-用法和区别/">call()和apply()用法和区别</a>
@@ -492,10 +542,6 @@ screen
             <a href="/2018/02/02/引用类型和值类型/">引用类型和值类型</a>
           </li>
         
-          <li>
-            <a href="/2018/02/02/获取数据类型/">获取数据类型</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -509,7 +555,7 @@ screen
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Construido por <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
